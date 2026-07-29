@@ -16,3 +16,13 @@ function displayMessage(message){
   formMessage.className.remove("hidden")
 
 }
+
+foodList.addEventListener("submit", (event) =>{
+  event.preventDefault();
+  if (foodNameInput === ""){
+    displayMessage("Please enter a food input value")
+  
+  }else if(caloriesInput === "" || caloriesInput < 0 || caloriesInput > 10000){
+    displayMessage("Please enter a calorie input value")
+  }
+})
