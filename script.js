@@ -25,4 +25,9 @@ foodList.addEventListener("submit", (event) =>{
   }else if(caloriesInput === "" || caloriesInput < 0 || caloriesInput > 10000){
     displayMessage("Please enter a calorie input value")
   }
+  
+  const foodItem = document.createElement("li");
+  foodItem.className = "rounded bg-gray-100 px-4 py-2";
+  foodItem.textContent = `${foodName}: ${calories} calories`;
+  foodList.appendChild(foodItem);
 })
