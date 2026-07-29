@@ -10,3 +10,9 @@ const formMessage = document.getElementById("form-message");
 const itemCount = document.getElementById("item-count");
 const foodList = document.getElementById("food-list");
 const emptyState = document.getElementById("empty-state");
+
+function displayMessage(message){
+  formMessage.textContent = message;
+  formMessage.className.remove("hidden")
+
+}
