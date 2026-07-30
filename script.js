@@ -38,3 +38,12 @@ resetButton.addEventListener("click", () => {
   formMessage.classList.add("hidden");
   updateDashboard();
 });
+
+suggestButton.addEventListener("click", () => {
+  if (!foodNameInput.value.trim()) {
+    displayMessage("Enter a food name before requesting a suggestion.");
+    return;
+  }
+
+  displayMessage("Enter the calorie amount shown on your food label.");
+});
