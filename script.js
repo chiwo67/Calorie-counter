@@ -31,3 +31,10 @@ foodList.addEventListener("submit", (event) =>{
   foodItem.textContent = `${foodName}: ${calories} calories`;
   foodList.appendChild(foodItem);
 })
+
+resetButton.addEventListener("click", () => {
+  foods = [];
+  foodList.replaceChildren();
+  formMessage.classList.add("hidden");
+  updateDashboard();
+});
